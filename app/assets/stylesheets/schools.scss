@@ -1,0 +1,22 @@
+// Place all the styles related to the Schools controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.schools{
+	table{
+		border-collapse: collapse;
+		}
+	table tr td {
+		padding:15px;
+		vertical-align: top;
+		}
+	.list_actions {
+		font-size: x-small;
+		text-align-: right;
+		}
+	.list_line_even {
+		background: #e0f8f8;
+		}
+	.list_line_odd {
+		background: #f8b0f8;		
+		}
+}
