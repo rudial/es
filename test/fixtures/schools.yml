@@ -9,3 +9,8 @@ two:
   Name: MyString
   Address: MyString
   Call_number: MyString
+
+mbou:
+  Name: МБОУ СОШ №12
+  Address: MyAddress
+  Call_number: 14-24-55

@@ -3,6 +3,11 @@ require 'test_helper'
 class SchoolsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @school = schools(:one)
+	@update = {
+			Name: 'МБОУ СОШ №32',
+			Address: 'Киевская, 11',
+			Call_number: '14-12-15'
+ 			}
   end
 
   test "should get index" do
@@ -17,8 +22,9 @@ class SchoolsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create school" do
     assert_difference('School.count') do
-      post schools_url, params: { school: { Address: @school.Address, Call_number: @school.Call_number, Name: @school.Name } }
-    end
+   	post schools_url, params: { school: @update}
+
+  end
 
     assert_redirected_to school_url(School.last)
   end
@@ -34,8 +40,9 @@ class SchoolsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update school" do
-    patch school_url(@school), params: { school: { Address: @school.Address, Call_number: @school.Call_number, Name: @school.Name } }
+	put school_url(@school), params: { school: @update}
     assert_redirected_to school_url(@school)
+
   end
 
   test "should destroy school" do
