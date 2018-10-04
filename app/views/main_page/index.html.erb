@@ -1,0 +1,11 @@
+<% if notice %>
+<p id = "notice"><%= notice %></p>
+<% end %>
+<h1>Your schools</h1>
+<% @schools.each do |school|%>
+ <div class="entry">
+  <h3><%= school.Name%></h3>
+  <p><%= school.Address %></p>
+  <span class="Call_number"><%= school.Call_number %></span>
+ </div>
+<% end %>
